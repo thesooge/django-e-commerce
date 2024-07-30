@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+
+{% block page_title %}
+    Products
+{% endblock page_title %}
+
+{% block content %}
+    <h1>here are Products<h1>
+    {% for product in  products %}
+
+        <a href ='{{product.get_absolute_url}}'><h3>{{product.title}}</h3></a>
+        <h5>price :{{product.price}}</h5>
+
+    
+    {% endfor %}
+{% endblock content %}

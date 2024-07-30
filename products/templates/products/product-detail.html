@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block page_title %}
+   {{product.title}}
+{% endblock page_title %}
+
+{% block content %}
+    <h1>here is the Product<h1>
+
+    <h2>{{product.title}}</h2>
+    <h5>created on: {{product.datetime_created}}</h5>
+    <p>{{product.description}}</p>
+    <h4>price: {{product.price}}</h4>
+
+{% endblock content %}
