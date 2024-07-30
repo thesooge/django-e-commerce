@@ -17,7 +17,7 @@
         <form action= "{% url 'account_logout' %}" method= 'post'>
             {% csrf_token %}
             
-            خوش آمدی {{user.username}}
+            Welcommen {{user.username}}
        
             <button type= 'submit' class = 'btn btn-danger'> logout</button> 
         </form>
