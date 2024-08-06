@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
 
+    'crispy_forms',
+    'crispy_bootstrap5',
+
+
+
     #local 
     'accounts',
     'pages',
@@ -176,3 +181,7 @@ LOGIN_REDIRECT_URL = 'home'
 # static files 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+
+# crispy 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
