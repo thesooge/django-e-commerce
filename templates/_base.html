@@ -63,7 +63,7 @@
                                             </a>
                                          </li>
                                         <li class="mainmenu__item">
-                                            <a href="contact-us.html" class="mainmenu__link">
+                                            <a href="{% url 'aboutus' %}" class="mainmenu__link">
                                                 <span class="mm-text">تماس با ما</span>
                                             </a>
                                         </li>
@@ -101,6 +101,26 @@
                                         <li>
                                             <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
                                         </li>
+
+                                        {% if user.is_authenticated %}
+                                        <li>
+                                            <form action= "{% url 'account_logout' %}" method= 'post'>
+                                                {% csrf_token %}
+
+
+                                            <a href="{% url 'account_logout' %}" class="mainmenu__link" >
+                                                <span class="mm-text " > خروج </span>
+                                            </a>
+                                            </form>
+                                        </li>
+                                        {% else %}
+                                        <li>
+                                            <a href="{% url 'account_login' %}" class="text-right"> ورود  </a> 
+                                        </li>
+                                        <li>    
+                                            <a href="{% url 'account_signup' %}" class="text-right"> ثبت نام</a>
+                                        </li>    
+                                        {% endif %}
                                     </ul>
                                 </li>
                                 <li class="header-toolbar__item">
@@ -119,7 +139,7 @@
                 </div>
             </div>
         </header>
-        {% comment %} <!-- Header End --> 
+        {% comment %} {% comment %} <!-- Header End --> 
         <a href="{% url 'home' %}"> Home | </a> 
         <a href="{% url 'product-list' %}"> Products</a> {% endcomment %}
         {% comment %} {% if user.is_authenticated %}
