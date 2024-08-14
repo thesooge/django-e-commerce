@@ -6,6 +6,7 @@ from django.views import generic
 
 from .forms import  CommentForm
 from .models import Product, ProductComment
+from cart.forms import AddToCartForm
 # Create your views here.
 
 class ProductLists(generic.ListView):
@@ -22,6 +23,7 @@ class ProductDetail(generic.DetailView):
         context = super().get_context_data(**kwargs)
 
         context['form'] = CommentForm()
+
 
         return context
     
