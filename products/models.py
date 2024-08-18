@@ -35,6 +35,7 @@ class ProductComment(models.Model):
     stars = models.CharField(max_length=10, choices=choices)
 
 
+
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
