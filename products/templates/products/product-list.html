@@ -1,5 +1,7 @@
 {% extends "_base.html" %}
 
+{% laod 'i18n' %}
+
 {% block page_title %}
     Products
 {% endblock page_title %}
@@ -21,7 +23,7 @@
                             </a>
                         </div>
                     </div>
-                    <span class="product-badge">تخفیف ویژه</span>
+                    <span class="product-badge">{% trans "Special Offer"%}</span>
                 </figure>
                 <div class="product-info">
                     <h3 class="product-title h6 mb--15">
