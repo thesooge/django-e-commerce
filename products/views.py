@@ -58,3 +58,5 @@ def delete_own_comment(request, pk):
     return redirect("product-detail", comment.product.id)
 
 
+
+

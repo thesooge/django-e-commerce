@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-18 15:49+0330\n"
-"PO-Revision-Date: 2024-08-18 16:14+0330\n"
+"POT-Creation-Date: 2024-08-18 17:38+0330\n"
+"PO-Revision-Date: 2024-08-18 17:39+0330\n"
 "Last-Translator:   <mmdreza@mmdreza.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -22,3 +22,7 @@ msgstr ""
 #: .\templates\products\product-list.html:26
 msgid "Special Offer"
 msgstr "پیشناد ویژه"
+
+#: .\views.py:46
+msgid "comment added succsesfully"
+msgstr "نظر شما با موفقیت ثبت شد!"

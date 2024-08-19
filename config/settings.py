@@ -79,8 +79,10 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
+                'django.contrib.auth.context_processors.auth', # for users
                 'django.contrib.messages.context_processors.messages',
+                # local
+                'cart.context_processors.cart',
 
                 'django.template.context_processors.request',
             ],
