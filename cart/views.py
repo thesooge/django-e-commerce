@@ -10,6 +10,9 @@ def cart_list(request):
 
     cart = Cart(request)
 
+    for item in cart:
+        item['product_update_quantity'] = AddToCartForm(initial={'quantity' : item['quantity'], 'inplace' : True })
+
     return render(request, 'cart/cart-list.html', {'cart' : cart ,})
 
 def add_to_cart(request, product_id):
@@ -18,12 +21,15 @@ def add_to_cart(request, product_id):
 
     product = get_object_or_404(Product, id=product_id)
 
+
+
+
     form = AddToCartForm(request.POST)
 
     if form.is_valid():
         cleaned_data = form.cleaned_data
         quantity = cleaned_data['quantity']
-        cart.add(product, quantity)
+        cart.add(product, quantity, replace_current_quantity =  cleaned_data['inplace'])
 
     return redirect('cart:cart_detail')
 
