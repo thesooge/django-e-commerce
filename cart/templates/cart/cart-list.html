@@ -3,6 +3,7 @@
 {% load i18n %}
 {% load arabicnums %}
 {% load util %}
+{% load humanize %}
 
 {% block page_title %}
 Cart
@@ -60,7 +61,7 @@ Cart
                                                 </td>
                                                 <td class="product-price">
                                                     <span class="product-price-wrapper">
-                                                        <span class="money">{{item.product_obj.price|persian_int}} {% trans '$' %}</span>
+                                                        <span class="money">{{item.product_obj.price|persian_int| intcomma:False}} {% trans '$' %}</span>
                                                     </span>
                                                 </td>
                                                 <td class="product-quantity">
@@ -78,7 +79,7 @@ Cart
                                                 </td>
                                                 <td class="product-total-price">
                                                     <span class="product-price-wrapper">
-                                                        <span class="money">{{ item.quantity | multiply:item.product_obj.price | persian_int}} {% trans '$' %}</span>
+                                                        <span class="money">{{ item.quantity | multiply:item.product_obj.price | persian_int | intcomma:False}} {% trans '$' %}</span>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -135,7 +136,7 @@ Cart
                                         <span>مجموع</span>
                                     </div>
                                     <div class="cart-calculator__item--value">
-                                        <span>{{cart.get_total_price|persian_int}} {% trans '$' %} </span>
+                                        <span>{{cart.get_total_price|persian_int|intcomma:False}} {% trans '$' %} </span>
                                     </div>
                                 </div>
                                 <div class="cart-calculator__item order-total">
@@ -144,7 +145,7 @@ Cart
                                     </div>
                                     <div class="cart-calculator__item--value">
                                         <span class="product-price-wrapper">
-                                            <span class="money">{{cart.get_total_price|persian_int}} {% trans '$' %} </span>
+                                            <span class="money">{{cart.get_total_price|persian_int|intcomma:False}} {% trans '$' %} </span>
                                         </span>
                                     </div>
                                 </div>
