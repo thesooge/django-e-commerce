@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-25 11:44+0330\n"
+"PO-Revision-Date: 2024-08-25 11:45+0330\n"
+"Last-Translator: mmdreza baher <mmdreza@mmdreza.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\models.py:9
+msgid "User"
+msgstr "کاربر"
+
+#: .\models.py:12
+msgid "FirstName"
+msgstr "نام"
+
+#: .\models.py:13
+msgid "LastName"
+msgstr "نام خانوادگی"
+
+#: .\models.py:14
+msgid "Address"
+msgstr "آدرس"
+
+#: .\models.py:15
+msgid "Phone"
+msgstr "تلفن"
+
+#: .\models.py:16
+msgid "Description"
+msgstr "توضیحات"
+
+#: .\models.py:17
+msgid "IsPaid?"
+msgstr "پرداخت شده؟"
+
+#: .\models.py:23
+msgid "Order"
+msgstr "سفارش"
+
+#: .\models.py:24 .\templates\order\order.html:77
+msgid "Product"
+msgstr "محصول"
+
+#: .\models.py:25
+msgid "Quantity"
+msgstr "تعداد"
+
+#: .\templates\order\order.html:71
+#, fuzzy
+#| msgid "Order"
+msgid "Your Order"
+msgstr "سفارش"
+
+#: .\templates\order\order.html:78
+msgid "LastPrice"
+msgstr "آخرین قیمت"
+
+#: .\templates\order\order.html:88 .\templates\order\order.html:97
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\order\order.html:96
+msgid "total"
+msgstr "مجموع"
+
+#: .\templates\order\order.html:103
+msgid "PaymentMethod"
+msgstr "روش پرداخت"
+
+#: .\views.py:19
+msgid "The cart is empy first add product to your cart!"
+msgstr "سبد خرید خالی است! محصولاتی را اضافه کنید!"

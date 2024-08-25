@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 
+{% load i18n %}
 
 {% block content %}
 <!-- Breadcrumb area Start -->
@@ -67,40 +68,39 @@
                 <div class="col-xl-5 offset-xl-1 col-lg-6 mt-md--40">
                     <div class="order-details">
                         <div class="checkout-title mt--10">
-                            <h2>سفارش شما</h2>
+                            <h2>{% trans 'Your Order' %}</h2>
                         </div>
                         <div class="table-content table-responsive mb--30">
                             <table class="table order-table order-table-2">
                                 <thead>
                                     <tr>
-                                        <th>محصول</th>
-                                        <th class="text-right">قیمت نهایی</th>
+                                        <th>{% trans 'Product' %}</th>
+                                        <th class="text-right">{% trans 'LastPrice'%}</th>
                                     </tr>
                                 </thead>
+                                
+                                {% for item in cart  %}
                                 <tbody>
                                     <tr>
-                                        <th>محصول شماره یک
-                                            <strong><span>&#10005;</span>۲</strong>
+                                        <th>  {{item.product_obj.title}}
+                                            <strong><span>&#10005;</span>{{item.quantity}}</strong>
                                         </th>
-                                        <td class="text-right">۲۹۶,۰۰۰ تومان</td>
-                                    </tr>
-                                    <tr>
-                                        <th>محصول شماره دو
-                                            <strong><span>&#10005;</span>۱</strong>
-                                        </th>
-                                        <td class="text-right">۵۸,۰۰۰ تومان</td>
+                                        <td class="text-right"> {{item.product_obj.price}} {% trans '$' %}</td>
                                     </tr>
                                 </tbody>
+                                
+                                {% endfor %}
+
                                 <tfoot>
                                     <tr class="cart-subtotal">
-                                        <th>مجموع</th>
-                                        <td class="text-right">۳۴۸,۰۰۰ تومان</td>
+                                        <th>{% trans 'total' %}</th>
+                                        <td class="text-right">{{cart.get_total_price}} {% trans '$' %}</td>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
                         <div class="checkout-payment">
-                            <h2 class="py-5">روش پرداخت</h2>
+                            <h2 class="py-5"> {% trans 'PaymentMethod' %}</h2>
                             <form action="#" class="payment-form">
                                 <div class="payment-group mb--10">
                                     <div class="payment-radio">
